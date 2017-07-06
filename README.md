@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 This is a starter template for [Ionic](http://ionicframework.com/docs/) projects.
 
 ## How to use this template
@@ -24,3 +25,7 @@ $ ionic cordova run ios
 
 Substitute ios for android if not on a Mac.
 
+=======
+# redditFeeds
+This is the simple ionic app which will take the feed form reddit snd shows in app using its api provided
+>>>>>>> 4904d964fff00fecea1ae25e079e934aea7b4141
