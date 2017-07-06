@@ -8,15 +8,27 @@ import { DetailsPage } from '../details/details';
 })
 export class ReditPage {
     items: any;
-
+    category : any;
+    limit: any;
     constructor (public navCtrl : NavController, private reditService : ReditServices) {
-        
+        this.getDefaults();
     }
     ngOnInit () {
-        console.log ('OnInitRan');
-        this.getPosts ('sports', 10);     
+        this.getPosts (this.category, this.limit);     
     }
 
+    getDefaults () {
+        if (localStorage.getItem('category') != null ) {
+            this.category = localStorage.getItem('category');
+        } else {
+             this.category = 'sports';
+        }
+        if (localStorage.getItem('limit') != null ) {
+            this.limit = localStorage.getItem('limit');
+        } else {
+             this.limit = 10;
+        }     
+    }
     getPosts (categoty, limit) {
         this.reditService.getPosts(categoty, limit).subscribe (response => {
             this.items = response.data.children;
@@ -26,5 +38,8 @@ export class ReditPage {
         this.navCtrl.push (DetailsPage, {
             item:item,
         });
+    }
+    changeCategory () {
+        this.getPosts (this.category, this.limit);
     }
 }

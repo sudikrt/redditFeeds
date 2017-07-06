@@ -5,7 +5,6 @@ import { MyApp } from './app.component';
 import { HttpModule } from '@angular/http'; 
 import { AboutPage } from '../pages/about/about';
 import { ReditPage } from '../pages/redit/redit';
-import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
 import { SettingsPage } from '../pages/settings/settings';
 import { DetailsPage } from '../pages/details/details';
@@ -18,7 +17,6 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     MyApp,
     AboutPage,
     ReditPage,
-    HomePage,
     DetailsPage,
     SettingsPage,
     TabsPage
@@ -33,7 +31,6 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     MyApp,
     AboutPage,
     ReditPage,
-    HomePage,
     DetailsPage,
     SettingsPage,
     TabsPage
